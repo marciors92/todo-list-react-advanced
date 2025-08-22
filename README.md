@@ -1,12 +1,36 @@
-# React + Vite
+# Lista de Tarefas (To-Do List) em React Avançado
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto de uma aplicação de lista de tarefas desenvolvido com React para demonstrar o uso de recursos avançados como Hooks, Context API e Memoization.
 
-Currently, two official plugins are available:
+## Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* **React:** Biblioteca JavaScript para construção de interfaces de usuário.
+* **Vite:** Ferramenta de build de front-end para desenvolvimento rápido.
+* **Hooks:** `useState`, `useEffect`, `useContext`, `useMemo`.
+* **Hooks Customizados:** `useLocalStorage` para persistir dados.
+* **Context API:** Para gerenciar o estado global da aplicação.
+* **Memoization:** `React.memo` para otimizar a renderização de componentes.
 
-## Expanding the ESLint configuration
+## Como Rodar o Projeto Localmente
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1.  Clone este repositório para sua máquina:
+    ```bash
+    git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
+    ```
+
+2.  Navegue até o diretório do projeto:
+    ```bash
+    cd seu-repositorio
+    ```
+
+3.  Instale as dependências:
+    ```bash
+    npm install
+    ```
+
+4.  Inicie o servidor de desenvolvimento:
+    ```bash
+    npm run dev
+    ```
+
+A aplicação estará disponível em `http://localhost:5173`.
