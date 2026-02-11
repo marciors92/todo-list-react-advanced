@@ -1,11 +1,13 @@
 import React from 'react';
 
-// React.memo impede que o item renderize se não houver mudança nele
 export const TodoItem = React.memo(({ todo, onToggle, onDelete }) => {
     return (
         <li className={`todo-item ${todo.completed ? 'completed' : ''}`}>
-            <span onClick={() => onToggle(todo.id)}>{todo.text}</span>
-            <button onClick={() => onDelete(todo.id)}>Remover</button>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', cursor: 'pointer' }} onClick={() => onToggle(todo.id)}>
+                <input type="checkbox" checked={todo.completed} readOnly />
+                <span>{todo.text}</span>
+            </div>
+            <button onClick={() => onDelete(todo.id)}>Excluir</button>
         </li>
     );
 });
