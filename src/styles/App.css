@@ -1,54 +1,156 @@
 :root {
-    --primary: #646cff;
-    --bg: #f9f9f9;
+    --primary-color: #6366f1;
+    --primary-hover: #4f46e5;
+    --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    --card-bg: rgba(30, 41, 59, 0.7);
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --success: #10b981;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--bg-gradient);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    /* Enquadramento horizontal */
+    align-items: center;
+    /* Enquadramento vertical */
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main);
+    padding: 20px;
 }
 
 .app-container {
-    max-width: 500px;
-    margin: 2rem auto;
-    padding: 1rem;
-    font-family: sans-serif;
+    width: 100%;
+    max-width: 550px;
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
-/* Mobile First: Inputs e botões ocupam 100% no celular */
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 24px;
+    text-align: center;
+    background: linear-gradient(to right, #818cf8, #c084fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Formulário com melhor enquadramento */
 .todo-form {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    gap: 12px;
+    margin-bottom: 32px;
 }
 
 .todo-form input {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    flex: 1;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 14px 20px;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.todo-form input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
 }
 
 .todo-form button {
-    padding: 12px;
-    background: var(--primary);
+    background: var(--primary-color);
     color: white;
     border: none;
+    padding: 0 24px;
+    border-radius: 12px;
+    font-weight: 600;
     cursor: pointer;
+    transition: background 0.2s;
 }
 
+.todo-form button:hover {
+    background: var(--primary-hover);
+}
+
+/* Filtros Estilizados */
 .filters {
     display: flex;
-    justify-content: space-around;
-    margin: 20px 0;
+    background: rgba(15, 23, 42, 0.4);
+    padding: 4px;
+    border-radius: 14px;
+    margin-bottom: 24px;
+}
+
+.filters button {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s;
 }
 
 .filters button.active {
-    font-weight: bold;
-    border-bottom: 2px solid var(--primary);
+    background: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Desktop: Ajuste para telas maiores */
-@media (min-width: 600px) {
-    .todo-form {
-        flex-direction: row;
-    }
+/* Lista de Afazeres */
+.todo-list {
+    list-style: none;
+}
 
-    .todo-form input {
-        flex: 1;
-    }
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    margin-bottom: 12px;
+    border: 1px solid transparent;
+    transition: transform 0.2s;
+}
+
+.todo-item:hover {
+    transform: translateX(5px);
+    border-color: var(--border-color);
+}
+
+.todo-item.completed span {
+    text-decoration: line-through;
+    color: var(--text-muted);
+}
+
+.todo-item button {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.empty-state {
+    text-align: center;
+    color: var(--text-muted);
+    margin-top: 20px;
 }
