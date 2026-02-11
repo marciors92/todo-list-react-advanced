@@ -1,0 +1,54 @@
+:root {
+    --primary: #646cff;
+    --bg: #f9f9f9;
+}
+
+.app-container {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 1rem;
+    font-family: sans-serif;
+}
+
+/* Mobile First: Inputs e botões ocupam 100% no celular */
+.todo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.todo-form input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.todo-form button {
+    padding: 12px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.filters button.active {
+    font-weight: bold;
+    border-bottom: 2px solid var(--primary);
+}
+
+/* Desktop: Ajuste para telas maiores */
+@media (min-width: 600px) {
+    .todo-form {
+        flex-direction: row;
+    }
+
+    .todo-form input {
+        flex: 1;
+    }
+}

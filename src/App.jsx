@@ -1,11 +1,34 @@
-import React from 'react';
+import { useContext } from 'react';
+import { TodoContext } from './context/TodoContext';
+import { TodoForm } from './components/TodoForm';
+import { TodoItem } from './components/TodoItem';
+import { TodoFilters } from './components/TodoFilters';
+import './styles/App.css';
 
-// React.memo impede que o item renderize se não houver mudança nele
-export const TodoItem = React.memo(({ todo, onToggle, onDelete }) => {
+export default function App() {
+  const { filteredTodos, toggleTodo, deleteTodo } = useContext(TodoContext);
+
   return (
-    <li className={`todo-item ${todo.completed ? 'completed' : ''}`}>
-      <span onClick={() => onToggle(todo.id)}>{todo.text}</span>
-      <button onClick={() => onDelete(todo.id)}>Remover</button>
-    </li>
+    <div className="app-container">
+      <header>
+        <h1>Minha Lista de Afazeres</h1>
+        <TodoForm />
+      </header>
+
+      <main>
+        <TodoFilters />
+        <ul className="todo-list">
+          {filteredTodos.map(todo => (
+            <TodoItem
+              key={todo.id}
+              todo={todo}
+              onToggle={toggleTodo}
+              onDelete={deleteTodo}
+            />
+          ))}
+        </ul>
+        {filteredTodos.length === 0 && <p className="empty">Nenhuma tarefa encontrada.</p>}
+      </main>
+    </div>
   );
-});
+}
