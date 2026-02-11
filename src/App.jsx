@@ -11,7 +11,7 @@ export default function App() {
   return (
     <div className="app-container">
       <header>
-        <h1>Minha Lista de Afazeres</h1>
+        <h1>Lista de Afazeres</h1>
         <TodoForm />
       </header>
 
@@ -27,7 +27,9 @@ export default function App() {
             />
           ))}
         </ul>
-        {filteredTodos.length === 0 && <p className="empty">Nenhuma tarefa encontrada.</p>}
+        {filteredTodos.length === 0 && (
+          <p className="empty-state">Por ora, nenhuma tarefa... ☕</p>
+        )}
       </main>
     </div>
   );
