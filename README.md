@@ -1,23 +1,28 @@
-# Todo List - React Avançado 🚀
+# 🚀 Lista de Afazeres - React Avançado
 
-Projeto desenvolvido como parte da **Jornada de Aprendizagem Engenheiro Front-End**. Esta aplicação de lista de tarefas foca em técnicas avançadas de gerenciamento de estado e otimização de performance.
+Projeto desenvolvido para consolidar competências da trilha **Engenheiro Front-End**. Esta aplicação vai além de um simples "To-do", focando em arquitetura escalável, performance otimizada e interface.
 
-## ✨ Funcionalidades
-- Adição, remoção e conclusão de tarefas.
-- Filtros dinâmicos (Todas, Pendentes, Concluídas).
-- Persistência de dados automática no navegador.
+## 🎯 Objetivo do Projeto
+Demonstrar o domínio de tecnologias modernas do ecossistema React, aplicando técnicas de renderização eficiente, gerenciamento de estado global e design responsivo.
 
-## 🛠️ Tecnologias Utilizadas
-- **React 18** (Vite)
-- **Context API** (Estado Global)
-- **Hooks Customizados** (Lógica de Persistência)
-- **Memoization** (`useMemo`, `React.memo`)
-- **CSS3** (Mobile First & Responsividade)
+## 🛠️ Tecnologias e Conceitos Aplicados
 
-## 📦 Como rodar o projeto localmente
+### ⚛️ React Avançado
+- **Context API**: Gerenciamento de estado global para evitar o *prop drilling*.
+- **Hooks Customizados**: Encapsulamento de lógica de negócio (ex: `useLocalStorage`) para promover o reuso de código.
+- **Memoization**: Uso estratégico de `useMemo`, `useCallback` e `React.memo` para garantir que apenas os componentes necessários sejam renderizados, mantendo a aplicação fluida mesmo com grandes volumes de dados.
+
+### 🎨 UI/UX & Responsividade
+- **Mobile First**: Design pensado primeiramente para dispositivos móveis, adaptando-se perfeitamente a desktops.
+- **Glassmorphism**: Interface moderna utilizando filtros de desfoque, gradientes e variáveis CSS para consistência visual.
+- **Feedback Visual**: Estados de conclusão e filtros dinâmicos que melhoram a experiência do usuário.
+
+### 📑 Versionamento & Boas Práticas
+- **Conventional Commits**: Histórico de Git organizado com mensagens semânticas (feat, style, perf, docs).
+- **Clean Code**: Separação clara de responsabilidades entre componentes, estilos e lógica (hooks/context).
+
+## 🚀 Como Executá-lo
+
 1. Clone o repositório:
-   `git clone https://github.com/seu-usuario/todo-react-avancado.git`
-2. Instale as dependências:
-   `npm install`
-3. Inicie o servidor de desenvolvimento:
-   `npm run dev`
+   ```bash
+   git clone [https://github.com/seu-usuario/todo-react-avancado.git](https://github.com/seu-usuario/todo-react-avancado.git)
