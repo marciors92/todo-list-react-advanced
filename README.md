@@ -1,28 +1,47 @@
-# 🚀 Lista de Afazeres - React Avançado
+# 🚀 Lista de Afazares c/ React Avançado e Arq. Escalável
 
-Projeto desenvolvido para consolidar competências da trilha **Engenheiro Front-End**. Esta aplicação vai além de um simples "To-do", focando em arquitetura escalável, performance otimizada e interface.
+Projeto desenvolvido como parte da trilha de **Engenheiro Front-End**, focado em entregar uma aplicação que simula os padrões de qualidade exigidos em grandes produtos digitais. 
 
-## 🎯 Objetivo do Projeto
-Demonstrar o domínio de tecnologias modernas do ecossistema React, aplicando técnicas de renderização eficiente, gerenciamento de estado global e design responsivo.
+**🔗 [Acesse o projeto ao vivo aqui](https://marciors92.github.io/todo-list-react-advanced/)**
 
-## 🛠️ Tecnologias e Conceitos Aplicados
+---
 
-### ⚛️ React Avançado
-- **Context API**: Gerenciamento de estado global para evitar o *prop drilling*.
-- **Hooks Customizados**: Encapsulamento de lógica de negócio (ex: `useLocalStorage`) para promover o reuso de código.
-- **Memoization**: Uso estratégico de `useMemo`, `useCallback` e `React.memo` para garantir que apenas os componentes necessários sejam renderizados, mantendo a aplicação fluida mesmo com grandes volumes de dados.
+## 🔍 Demonstração prática
 
-### 🎨 UI/UX & Responsividade
-- **Mobile First**: Design pensado primeiramente para dispositivos móveis, adaptando-se perfeitamente a desktops.
-- **Glassmorphism**: Interface moderna utilizando filtros de desfoque, gradientes e variáveis CSS para consistência visual.
-- **Feedback Visual**: Estados de conclusão e filtros dinâmicos que melhoram a experiência do usuário.
+![lista de afazeres](https://github.com/user-attachments/assets/205ccf60-cf40-4110-8adc-e8e7a0b19221)
 
-### 📑 Versionamento & Boas Práticas
-- **Conventional Commits**: Histórico de Git organizado com mensagens semânticas (feat, style, perf, docs).
-- **Clean Code**: Separação clara de responsabilidades entre componentes, estilos e lógica (hooks/context).
 
-## 🚀 Como Executá-lo
+*Obs.: O GIF acima demonstra a fluidez das transições e a reatividade instantânea da interface ao filtrar tarefas, resultado das técnicas de Memoization aplicadas.*
+
+---
+
+## 🎯 Diferenciais técnicos
+
+### ⚛️ Arquitetura de Estado e Performance
+- **Gerenciamento Global com Context API**: Implementação de um `TodoProvider` no `main.jsx` para centralizar o estado e evitar o *prop drilling*, garantindo uma árvore de componentes limpa.
+- **Memoization Estratégica**: Uso de `React.memo`, `useMemo` e `useCallback` para evitar re-renderizações desnecessárias, mantendo o FPS constante mesmo sob carga.
+- **Hooks Customizados**: Abstração da lógica de persistência com `useLocalStorage`, desacoplando a lógica de negócio da UI.
+
+### 🎨 Design System e Responsividade
+- **Glassmorphism UI**: Interface moderna com transparências e desfoques, elevando o enquadramento visual da aplicação.
+- **Mobile-First Workflow**: Layout totalmente adaptável que garante uma experiência de usuário impecável do smartphone ao desktop.
+
+### ⚙️ CI/CD e Infraestrutura
+- **Build Automatizado**: Configuração de scripts de deploy utilizando o pacote `gh-pages` para integração contínua com o GitHub Pages.
+- **Vite Configuration**: Ajuste fino do `base path` no `vite.config.js` para garantir o carregamento correto de assets em subdiretórios de produção.
+
+---
+
+## 🛠️ Tecnologias utilizadas
+- **React 18+** (Hooks, Context, Fragments)
+- **Vite** (Build Tooling)
+- **CSS3** (Variáveis, Flexbox, Grid e Glassmorphism)
+- **Git/GitHub** (Conventional Commits e Versionamento Semântico)
+
+---
+
+## 🚀 Como executá-lo localmente
 
 1. Clone o repositório:
    ```bash
-   git clone [https://github.com/seu-usuario/todo-react-avancado.git](https://github.com/seu-usuario/todo-react-avancado.git)
+   git clone [https://github.com/marciors92/todo-list-react-advanced.git](https://github.com/marciors92/todo-list-react-advanced.git)
